@@ -13,7 +13,7 @@ export default function Registro(){
                     <input className= "backInput" type="password" placeholder="Contraseña"></input>
                     <input className= "backInput" type="password" placeholder="Confirmar Contraseña"></input>
                     <div className ="contenedorBotones">
-                        <a className = "botonBack"> Back </a> <a className = "botonlogin"> Registrar </a>
+                        <a href="/login" className = "botonBack"> Back </a> <a className = "botonlogin"> Registrar </a>
                     </div>
                 </div>
                 

@@ -13,7 +13,7 @@ export default function Login(){
                 </div>
                 <div className="ContenedorRegistro">
                     <p className = "parrafo"> Olvide mi contraseña / </p> 
-                    <a className = "registrate">  Registrar</a>
+                    <a href="/registro" className = "registrate">  Registrar</a>
                 </div>
             </div>
         </body>
