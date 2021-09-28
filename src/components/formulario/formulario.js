@@ -1,8 +1,22 @@
 import React from 'react'
 import './formulario.css'
 
+import Select from 'react-select';
+
+const options = [
+    { value: '1', label : '1'},
+    { value: '2', label : '2'},
+    { value: '3', label : '3'},
+    { value: '4', label : '4'},
+    { value: '5', label : '5'}
+]
+
 export default function Formulario(){
+    const onDropdownChange = (value) => {
+        console.log(value);
+    }
     return (
+        
         <body>
             <div className="Container">
                 <div className ="formContainer">
@@ -51,28 +65,65 @@ export default function Formulario(){
                                 <h1 className="h1conteint">¿Está satisfecho con las oportunidades de crecimiento de tu carrera en esta empresa, y hay un plan claro disponible para hacerlo?</h1>
                             </div>
                             <div className="conteintdesplegables">
-                                <h1></h1>
+                                <Select className="select"    
+                                    options={options}
+                                    onChange={onDropdownChange} 
+                                />
                             </div>
 
                             <div>
                                 <h1 className="h1conteint">¿Tu gerente te comunica las expectativas y te da retroalimentación de manera clara y profesional?</h1>
                             </div>
                             <div className="conteintdesplegables">
-                                <h1></h1>
+                                 <Select className="select"    
+                                    options={options}
+                                    onChange={onDropdownChange} 
+                                />
                             </div>
 
                             <div>
                                 <h1 className="h1conteint">¿Tienes todas las herramientas necesarias para hacer tu mejor trabajo?</h1>
                             </div>
                             <div className="conteintdesplegables">
-                                <h1></h1>
+                                 <Select className="select"    
+                                    options={options}
+                                    onChange={onDropdownChange} 
+                                />
                             </div>
-                            
+
                         </div>
 
                     </div>
 
-                    
+                    <div className="calificacionfinal">
+                        <h1 className="calif">Calificacion Final</h1>
+                    </div>
+
+                    <div className="contentpromedio">
+                        
+                        <div className="calificacionprom">
+                            <h1 className="calif">Promedio General</h1>
+                        </div>
+                        <div className="calificacionprom">
+
+                        </div>
+
+                    </div>
+
+                    <div className="cargoFechaContainer">
+                        <div className="cargoContainer">
+                            <h2 className="h2container">DNI</h2>
+                            <input className="inputcontainerdate" type="numeric"   ></input>
+                        </div>
+                        <div className="fechaContainer">
+                            <h2 className="h2container">ID</h2>
+                            <input className="inputcontainerdate" type="numeric" ></input>
+                        </div>
+                    </div>
+
+                    <button className="buttoncontent">
+                                Enviar
+                    </button>
                 </div>
             </div>
         </body>

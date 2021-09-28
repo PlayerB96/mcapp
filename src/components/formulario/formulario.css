@@ -4,14 +4,19 @@
     height: 100%;
     position: relative;
     margin: auto;
+    padding: auto;
     text-align: center;
+    padding-bottom: 150px;
     
 }
 
 .formContainer {
     width: 50%;
+    height: 100%;
     background: #DFCC70;
     margin:auto;
+    padding: auto;
+    text-align: center;
     
 }
 
@@ -123,6 +128,7 @@
     box-shadow: 1px 1px 3px #221f1f;
     position: relative;
     top: 20px;
+    padding-bottom:100px ;
     
     
     
@@ -138,6 +144,7 @@
     margin-top: 35px;
     position: relative;
     top:-30px;
+    box-shadow: 1px 1px 3px #221f1f;
     
     
 }
@@ -186,5 +193,70 @@
     opacity: 50%;
     border-radius: 3px;
     padding-top: 70px;
+  
+}
+
+.select {
+    width: 50px;
+    height: 15px;
+    margin: auto;
+    padding: auto;
+    position:relative; 
+    top:-70px;
+    font-weight: bold;
+    color: black;
+    font-size: 8px;
     
+}
+
+.buttoncontent {
+    text-align: center;
+    background: white;
+    padding:6px 20px;
+    margin:auto;
+    border-radius: 5px;
+    margin-top: 30px;
+    border:0px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px #221f1f;
+}
+
+.calificacionfinal {
+    width: 30%;
+    height: 50%;
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    padding: auto;
+    margin-top: 35px;
+    position: relative;
+    top:30px;
+    box-shadow: 1px 1px 3px #221f1f;
+}
+
+.calif {
+    color: black;
+    padding:10px;
+    font-size: 13px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.contentpromedio {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin:auto;
+    padding:auto;
+}
+
+.calificacionprom {
+    width: 90%;
+    height: 50%;
+    background: white;
+    border-radius: 5px;
+    margin: auto;
+    padding: auto;
+    margin-top: 35px;
+    box-shadow: 1px 1px 3px #221f1f;
 }
