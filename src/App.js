@@ -10,9 +10,9 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-        <Route path="/principal" component={Principal}/>
+        <Route exact path="/" component={Login}/>
+        <Route exact path="/principal" component={Principal}/>
         <Route path="/formulario" component={Formulario}/>
-        <Route path="/login" component={Login}/>
         <Route path="/registro" component={Registro}/>
     </BrowserRouter>
   )

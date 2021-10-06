@@ -1,0 +1,12 @@
+
+{
+    "usuarios":[
+        {
+            "id":1,
+            "apellido": "Rafael Andia",
+            "nombre":"Bryan",
+            "username":"player01",
+            "password":"123456"
+        }
+    ]
+}

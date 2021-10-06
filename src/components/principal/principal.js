@@ -8,6 +8,7 @@ function Principal() {
                 <div className="title">
                     <h1 className="megacursos_inc">FORMS MEGACURSOS INC</h1>
                 </div>
+                <a href="/" className="cerrar_s">Cerrar Sesión</a>
                 <div className="Cards">
                     <div className="Colaboradores">
                         <h1 className="card_colab"> Colaboradores </h1>
