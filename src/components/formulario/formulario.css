@@ -200,19 +200,6 @@
   
 }
 
-.select {
-    width: 40px;
-    height: 20px;
-    margin: auto;
-    padding: auto;
-    text-align: center;
-    position:relative; 
-    top:-40px;
-    font-weight: bold;
-    color: black;
-    font-size: 12px;
-    
-}
 
 .buttoncontent {
     text-align: center;
@@ -268,4 +255,32 @@
     padding: auto;
     margin-top: 35px;
     box-shadow: 1px 1px 3px #221f1f;
+}
+
+.inputprom{
+    width: 80%;
+    height: 20px;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    position:relative; 
+    top:-40px;
+    font-weight: bold;
+    color: black;
+    font-size: 10px;
+}
+
+.inputfinal{
+    width: 80%;
+    height: 20px;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    position:relative; 
+    top:10px;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    border: 0;
 }

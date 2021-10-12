@@ -1,33 +1,26 @@
-import React, {Component} from 'react'
+import React, {Component, value, useState, useEffect} from 'react'
 import './formulario.css'
 
 
-export default class Formulario extends React.Component{
-    
-    
-        
-    constructor(args){
-        super(args)
-        this.state = {
-            promedio1: '',
-            promedio2: '',
-            promedio3: ''
-        }
-        
-    }
 
-    onChange(e){
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+export default function Formulario() {
+    const [number, setNumber] = useState({one: "", two: "", three: ""})
+    const [suma, setSuma] = useState()
     
-
-    render() {
-        
+    
+    useEffect(()=>{
+        const { one, two, three } = number
+        setSuma(Number(one) + Number(two) + Number(three))
+        },[number]);
+    
+    
+    const handleInput = (event) => {
+        const { name, value } = event.target
+        setNumber({...number, [name]: value})
+      }  
+    
         
         return (
-            
             
             <body>
                 <form className="Container">
@@ -77,51 +70,36 @@ export default class Formulario extends React.Component{
                                     <h1 className="h1conteint">¿Está satisfecho con las oportunidades de crecimiento de tu carrera en esta empresa, y hay un plan claro disponible para hacerlo?</h1>
                                 </div>
                                 <div className="conteintdesplegables">
-                                    <select className="select"   
-                                        name="promedio1" 
-                                        onChange={this.onChange.bind(this)}
-                                        >  
-                                        <option value={0} >  </option>
-                                        <option value={1} > 1 </option>
-                                        <option value={2} > 2 </option>
-                                        <option value={3} > 3 </option>
-                                        <option value={4} > 4 </option>
-                                        <option value={5} > 5 </option>
-                                    </select>
+                                        <input className="inputprom"
+                                        onChange={handleInput} 
+                                        name="one" 
+                                        value={number.one} 
+                                        placeholder="Ingesar un Numero del (1) al (5)"/>
+                                        
                                 </div>
 
                                 <div>
                                     <h1 className="h1conteint">¿Tu gerente te comunica las expectativas y te da retroalimentación de manera clara y profesional?</h1>
                                 </div>
                                 <div className="conteintdesplegables">
-                                    <select className="select" 
-                                    name="promedio2" 
-                                    onChange={this.onChange.bind(this)}
-                                    >  
-                                        <option value={0}>  </option>
-                                        <option value={1}> 1 </option>
-                                        <option value={2}> 2 </option>
-                                        <option value={3}> 3 </option>
-                                        <option value={4}> 4 </option>
-                                        <option value={5}> 5 </option>
-                                    </select>
+                                        <input className="inputprom"
+                                        onChange={handleInput} 
+                                        name="two" 
+                                        value={number.two} 
+                                        placeholder="Ingesar un Numero del (1) al (5)" />
+                                        
                                 </div>
 
                                 <div>
                                     <h1 className="h1conteint">¿Tienes todas las herramientas necesarias para hacer tu mejor trabajo?</h1>
                                 </div>
                                 <div className="conteintdesplegables">
-                                    <select className="select"   
-                                        name="promedio3" 
-                                        onChange={this.onChange.bind(this)}
-                                        >  
-                                        <option value={0}>  </option>
-                                        <option value={1}> 1 </option>
-                                        <option value={2}> 2 </option>
-                                        <option value={3}> 3 </option>
-                                        <option value={4}> 4 </option>
-                                        <option value={5}> 5 </option>
-                                    </select>
+                                        <input className="inputprom"
+                                        onChange={handleInput} 
+                                        name="three" 
+                                        value={number.three} 
+                                        placeholder="Ingesar un Numero del (1) al (5)"/>
+                                        
                                 </div>
 
                             </div>
@@ -138,7 +116,7 @@ export default class Formulario extends React.Component{
                                 <h1 className="calif">Promedio General</h1>
                             </div>
                             <div className="calificacionprom">
-                                <span>{this.state.promedio3}</span>
+                            <input className="inputfinal" value={suma/3}/>
                             </div>
 
                         </div>
@@ -161,5 +139,5 @@ export default class Formulario extends React.Component{
                 </form>
             </body>
         );
-    }
+    
 }
